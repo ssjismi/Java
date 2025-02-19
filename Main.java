@@ -1,0 +1,77 @@
+import java.util.*;
+class Person
+{
+  String Name,Gender,Address;
+  int Age;
+  Person(String name,String gender,String address,int age)
+  {
+   Name=name;
+   Gender=gender;
+   Address=address;
+   Age=age;
+    System.out.println("The details are:");
+   System.out.print("Name:"+Name+"\n"+"Gender:"+Gender+"\n"+"Address:"+Address+"\n"+"Age:"+Age+"\n");
+  }
+}
+class Employee extends Person
+{
+ int Empid,Salary;
+ String Company_name,Qualification;
+ Employee(String name,String gender,String address,int age,int empid,String company_name,String qualification,int salary)
+ {
+  super(name,gender,address,age);
+  Empid=empid;
+  Company_name=company_name;
+  Qualification=qualification;
+  Salary=salary;
+  System.out.print("Employee Id:"+Empid+"\n"+"Company name:"+Company_name+"\n"+"Qualification:"+Qualification+"\n"+"Salary:"+Salary);
+  }
+}
+class Teacher extends Employee
+{
+ String Subject,Department;
+ int Teacherid;
+ Teacher(String name,String gender,String address,int age,int empid,String company_name,String qualification,int salary,String subject,String department,int teacherid)
+ {
+  super(name,gender,address,age,empid,company_name,qualification,salary);
+  Subject=subject;
+  Department=department;
+  Teacherid=teacherid;
+  System.out.print("Subject:"+Subject+"\n"+"Department:"+Department+"\n"+"Teacherid:"+Teacherid+"\n");
+  }
+}
+class Main
+{
+ public static void main(String args[])
+ {
+  Scanner sc=new Scanner(System.in);
+  System.out.println("Enter the name:");
+  String Name=sc.nextLine();
+  System.out.println("enter the gender:");
+  String Gender=sc.nextLine();
+  System.out.println("enter the address:");
+  String Address=sc.nextLine();
+  System.out.println("enter the Age");
+  int Age=sc.nextInt();
+  sc.nextLine();
+  System.out.println("enter the empid");
+  int Empid=sc.nextInt();
+  sc.nextLine();
+  System.out.println("enter the company name");
+  String Company_name=sc.nextLine();
+  System.out.println("enter the Qualification");
+  String Qualification=sc.nextLine();
+  System.out.println("enter the Salary");
+  int Salary=sc.nextInt();
+  sc.nextLine();
+  System.out.println("enter the Subject");
+  String Subject=sc.nextLine();
+  System.out.println("enter the Department");
+  String Department=sc.nextLine();
+  System.out.println("enter the Teacherid");
+  int Teacherid=sc.nextInt();
+  Teacher tech=new Teacher(Name,Gender,Address,Age,Empid,Company_name,Qualification,Salary,Subject,Department,Teacherid);
+ }
+}
+  
+  
