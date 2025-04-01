@@ -5,7 +5,7 @@ class table extends Thread
  {
   Scanner sc=new Scanner(System.in);
   //System.out.println("enter the multiplication table no:");
-  //int n=sc.nextInt();
+  //int c=sc.nextInt();
   for(int i=1;i<=10;i++)
   {
    System.out.println("from table"+(i*2));
@@ -18,10 +18,10 @@ class Prime extends Thread
  public void run()
  {
   Scanner sc=new Scanner(System.in);
-  System.out.println("enter the limit:");
-  int n=sc.nextInt();
+  //System.out.println("enter the limit:");
+  //int n=sc.nextInt();
   int flag;
-  for(int j=2;j<n;j++)
+  for(int j=2;j<25;j++)
   	{
   	flag=0;
 	for(int i=2;i<=j/2;i++)
